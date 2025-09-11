@@ -71,4 +71,9 @@
     h1{text-align:center;
     color:#f74000;}
 
+    #modal-login{
+        background-color:rgb(53, 53, 53);
+        border:7% solid;
+        border-image:linear-gradient(to right,#f74000, transparent)1;}
+
   body{background-color: rgb(53, 53, 53);}
