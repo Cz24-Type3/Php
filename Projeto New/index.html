@@ -15,7 +15,7 @@
                 <!--Menu lateral Mobile-->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="menu-lateral-mobile">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Kali racers</h5>
+            <h1 class="offcanvas-title">Kali racers</h1>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas">Fecha?</button>
         </div>
         <div class="offcanvas-body">
@@ -30,6 +30,9 @@
                     <a class="nav-link" href="Alimentacao.html">Alimentação</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link active" href="Powertrain.html">Power train</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" href="User_Consult.html">Consultar usuário</a>
                 </li>
             </ul>
@@ -39,7 +42,7 @@
 
                 <!--Menu lateral desktop-->
     <div class="menu-lateral d-none d-md-block">
-        <h5>Kali racers</h5>
+        <h1>Kali racers</h1>
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link" href="Turbinas.html">Turbinas</a>
@@ -49,6 +52,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="Alimentacao.html">Alimentação</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="Powertrain.html">Power train</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="User_Consult.html">Consultar usuário</a>
@@ -75,7 +81,10 @@
         </nav>
     </div>
     
-    
+            <!--Imagem foco-->                           
+    <div>
+        <img id="img-foco" src="Opala turbao.jpg">
+    </div>
 
 
                     <!--Conteúdo principal-->
@@ -87,9 +96,10 @@
             <!--card 1-->
             <div class="card" id="card">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
+                    <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                     <p class="card-text">Produto</p>
                         <!--Mais conteúdo-->
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
                     <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
                 </div>
             </div>
@@ -97,7 +107,7 @@
             <!-- Card 2-->
             <div class="card" id="card">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
+                    <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                     <p class="card-text">Produto</p>
                         <!--Mais conteúdo-->
                     <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
@@ -107,7 +117,7 @@
             <!-- Card 3-->
             <div class="card" id="card">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
+                    <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                     <p class="card-text">Produto</p>
                         <!--Mais conteúdo-->
                     <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
@@ -117,7 +127,7 @@
             <!-- Card 4-->
             <div class="card" id="card">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
+                    <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                     <p class="card-text">Produto</p>
                         <!--Mais conteúdo-->
                     <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
@@ -130,7 +140,7 @@
         <div class="row">
             <div class="card" id="card2">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
+                    <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                     <p class="card-text">Produto</p>
                         <!--Mais conteúdo-->
                     <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
@@ -140,7 +150,7 @@
             <!-- Card 2-->
             <div class="card" id="card2">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
+                    <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                     <p class="card-text">Produto</p>
                         <!--Mais conteúdo-->
                     <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
@@ -150,7 +160,7 @@
             <!-- Card 3-->
             <div class="card" id="card2">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
+                    <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                     <p class="card-text">Produto</p>
                         <!--Mais conteúdo-->
                     <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
@@ -160,7 +170,7 @@
             <!-- Card 4-->
             <div class="card" id="card2">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
+                    <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                     <p class="card-text">Produto</p>
                         <!--Mais conteúdo-->
                     <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
@@ -174,7 +184,7 @@
             <div class="row">
                 <div class="card" id="card2">
                     <div class="card-body">
-                        <h5 class="card-title">Titulo do produto</h5>
+                        <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                         <p class="card-text">Produto</p>
                             <!--Mais conteúdo-->
                         <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
@@ -184,7 +194,7 @@
                 <!-- Card 2-->
                 <div class="card" id="card2">
                     <div class="card-body">
-                        <h5 class="card-title">Titulo do produto</h5>
+                        <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                         <p class="card-text">Produto</p>
                             <!--Mais conteúdo-->
                         <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
@@ -194,7 +204,7 @@
                 <!-- Card 3-->
                 <div class="card" id="card2">
                     <div class="card-body">
-                        <h5 class="card-title">Titulo do produto</h5>
+                        <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                         <p class="card-text">Produto</p>
                             <!--Mais conteúdo-->
                         <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
@@ -204,7 +214,7 @@
                 <!-- Card 4-->
                 <div class="card" id="card2">
                     <div class="card-body">
-                        <h5 class="card-title">Titulo do produto</h5>
+                        <h5 id="titulo-produto" class="card-title">Titulo do produto</h5>
                         <p class="card-text">Produto</p>
                             <!--Mais conteúdo-->
                         <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
