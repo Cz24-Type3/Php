@@ -24,7 +24,7 @@ if($result->num_rows > 0) {
         $_SESSION['ulogin'] = $usuario['ulogin'];
 
         // Redireciona para a área logada
-        header("Location: painel.php");
+        header("Location: main-page.html");
         exit;
     } else {
         // Senha errada
