@@ -16,7 +16,8 @@
     $hash = password_hash($senha, PASSWORD_BCRYPT);//transforma a senha em um hash
     $senha_conf = $_POST['senha_conf'];
 
-    //COMANDO DE CRIAÇÃO DA TABELA USUÁRIOS
+            //COMANDO DE CRIAÇÃO DA TABELA USUÁRIOS
+
     //CREATE TABLE usuarios (
     //    id INT AUTO_INCREMENT PRIMARY KEY,
     //    nome VARCHAR(150) NOT NULL,
