@@ -1,12 +1,22 @@
 
 
         //Modal
-const button = document.getElementById('login');
-const modal = document.getElementById('modal-login');
+//const button = document.getElementById('login');
+//const modal = document.getElementById('modal-login');
 
-button.onclick = function() {
-    modal.showModal();
-};
+//button.onclick = function() {
+//    modal.showModal();
+//};
+
+//Muda de Login para Cadastro
+function mostrarCadastro() {
+  document.getElementById("login-form").classList.remove("active");
+  document.getElementById("cadastro-form").classList.add("active");
+}
+function mostrarLogin() {
+  document.getElementById("cadastro-form").classList.remove("active");
+  document.getElementById("login-form").classList.add("active");
+}
 
 //Confirmar a senha cadastro
 function validarSenha() {
@@ -20,7 +30,6 @@ function validarSenha() {
     return true; // libera o envio
   }
 
-  
 //Cadastro confirmado
   const params = new URLSearchParams(window.location.search);
   if(params.get("msg") === "sucesso"){
