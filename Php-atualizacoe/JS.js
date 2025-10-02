@@ -1,12 +1,12 @@
 
 
-        //Modal
-//const button = document.getElementById('login');
-//const modal = document.getElementById('modal-login');
+        //Modal do usuario
+const button = document.getElementById('usuario');
+const modal = document.getElementById('modal-usuario');
 
-//button.onclick = function() {
-//    modal.showModal();
-//};
+button.onclick = function() {
+    modal.showModal();
+};
 
 //Muda de Login para Cadastro
 function mostrarCadastro() {
@@ -18,7 +18,7 @@ function mostrarLogin() {
   document.getElementById("login-form").classList.add("active");
 }
 
-//Confirmar a senha cadastro
+//Confirmar a senha no cadastro
 function validarSenha() {
     const senha = document.getElementById("senha").value;
     const confirma = document.getElementById("confirma_senha").value;

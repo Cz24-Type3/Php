@@ -75,7 +75,7 @@
                     <!--Dark Mode-->
                     <button id="darkmode" type="button" class="btn"  data-bs-toggle="button"> <img src="darkmode.png" style="width:80%;height:80%;"> </button>
                     <!--Login e cadastro-->
-                    <button id="login" type="button" class="btn"  data-bs-toggle="button"> <img src="icone.png" style="width:80%;height:80%;"> </button>
+                    <button id="usuario" type="button" class="btn"  data-bs-toggle="button"> <img src="icone.png" style="width:80%;height:80%;"> </button>
                 </div>
             </div>
         </nav>
@@ -226,54 +226,30 @@
     </div>
 
                 <!--Modal do login-->
-    <dialog id="modal-login">
-        <div class="login-container">
-            <h2>Cadastro</h2>
-            <form action="cadastro.php" id="login-form" method="post">
-                <label>Nome completo</label>
-                <input type="text" name="nome" required><br><br>
-
-                <label>CPF</label>
-                <input type="number" name="cpf" required><br><br>
-
-                <label>Data de nascimento</label>
-                <input type="date" name="nascimento" required><br><br>
-
-                <label>Sexo</label>
-                    <select name="sexo">
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino" selected>Femenino</option>
-                        <option value="outro">Outros</option>
-                    </select><br><br>
-                
-                <label>Nome materno</label>
-                <input type="text" name="mae" required><br><br>
-
-                <label>Telefone fixo</label>
-                <input type="number" name="telefone"><br><br>
-
-                <label>Celular</label>
-                <input type="number" name="celular" required><br><br>
-
-                <label>Endereço</label>
-                <input type="text" name="endereco" required><br><br>
-
-                <label>E-mail</label>
-                <input type="email" name="email" required><br><br>
-
-                <label>Login</label>
-                <input type="text" name="ulogin" required><br><br>
-
-                <label>Senha</label>
-                <input type="password" id="senha" name="senha" required><br>
-                <label>Confirmar a senha</label>
-                <input type="password" id="confirma_senha" name="senha_conf" required><br><br>
-
-
-
-                <input type="submit" value="cadastrar">
-                <button type="reset">Limpar</button>
-            </form>
+    <dialog id="modal-usuario">
+        <div id="perfil">
+            <h2 style="color: #f74000;">Perfil de usuário</h2>
+            <button onclick="abrirPerfil()">Informações do usuário</button>
+            <div id="perfil-dados" style="color:whitesmoke"></div>
+            <script>
+                // Função para abrir o modal e carregar os dados do perfil
+                function abrirPerfil(){
+                    const modal = document.getElementById("modal-usuario");
+        
+                    fetch("perfil.php")
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById("perfil-dados").innerHTML = data;
+                            modal.showModal();
+                        })
+                        .catch(error => {
+                            document.getElementById("perfil-dados").innerHTML = "Erro ao carregar perfil.";
+                            console.error(error);
+                            modal.showModal();
+                        });
+                }
+            </script>
+            
         </div>
     </dialog>
     
