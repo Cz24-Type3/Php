@@ -1,5 +1,5 @@
 <?php
-session_start(); // Inicia a sessão para guardar dados do usuário
+//session_start(); // Inicia a sessão para guardar dados do usuário
 include("conexao.php"); // sua conexão com o banco
 
 // Recebe os dados do formulário
@@ -19,12 +19,13 @@ if($result->num_rows > 0) {
     // Verifica a senha digitada com a hash do banco
     if(password_verify($senha, $usuario['senha'])) {
         // Login correto → cria sessão
-        $_SESSION['id'] = $usuario['id'];
+        session_start();
+        $_SESSION['temp_user_id'] = $usuario['id'];
         $_SESSION['nome'] = $usuario['nome'];
         $_SESSION['ulogin'] = $usuario['ulogin'];
 
         // Redireciona para a área logada
-        header("Location: main-page.html");
+        header("Location: verificar2fa.php");
         exit;
     } else {
         // Senha errada

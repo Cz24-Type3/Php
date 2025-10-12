@@ -15,6 +15,14 @@
     $senha = $_POST['senha'];
     $hash = password_hash($senha, PASSWORD_BCRYPT);//transforma a senha em um hash
     $senha_conf = $_POST['senha_conf'];
+    $fa2p = $_POST['pergunta'];// Pergunta de autenticação de segundo fator
+    $fa2r = $_POST['resposta'];//Resposta da 2FA
+    $hashfa2 = password_hash($fa2r, PASSWORD_BCRYPT);//transforma a 2FA em hash
+
+    //LOGIN DE TESTE
+//kali
+//kali1234
+//ze
 
             //COMANDO DE CRIAÇÃO DA TABELA USUÁRIOS
 
@@ -31,20 +39,22 @@
     //    email VARCHAR(150) NOT NULL UNIQUE,
     //    ulogin VARCHAR(50) NOT NULL UNIQUE,
     //    senha VARCHAR(255) NOT NULL,  -- vai armazenar o hash (password_hash gera até 255 caracteres)
+    //    pergunta ENUM('cachorro', 'cor', 'musica') NOT NULL,
+    //    resposta VARCHAR(255) NOT NULL,
     //    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     //);
 
 
     //Comando para adicionar ao BD (SQL)
-    $sql = "INSERT INTO usuarios (nome, cpf, nascimento, sexo, mae, telefone, celular, endereco, email, ulogin, senha)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO usuarios (nome, cpf, nascimento, sexo, mae, telefone, celular, endereco, email, ulogin, senha, pergunta, resposta)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     
     //statement
     $stmt = $conexao->prepare($sql);
-    $stmt->bind_param("sssssssssss", $nome, $cpf, $nascimento, $sexo, $mae, $telefone, $celular, $endereco, $email, $login, $hash);
+    $stmt->bind_param("sssssssssssss", $nome, $cpf, $nascimento, $sexo, $mae, $telefone, $celular, $endereco, $email, $login, $hash, $fa2p, $hashfa2);
 
     if($stmt->execute()) {
-        header("Location: main-page.html?msg=sucesso");
+        header("Location: index.html?msg=sucesso");
         exit;
     } else {
         header("Location: index.html?msg=erro");
