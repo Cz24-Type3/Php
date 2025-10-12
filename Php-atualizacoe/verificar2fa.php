@@ -18,6 +18,7 @@ $usuario = mysqli_fetch_assoc($result);
 <head>
     <meta charset="UTF-8">
     <title>Verificação de segurança</title>
+    
 </head>
 <body style="background-color: #202020; color: white;">
     <h2>Verificação de segundo fator</h2>

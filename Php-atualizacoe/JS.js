@@ -37,3 +37,27 @@ function validarSenha() {
   } else if(params.get("msg") === "erro"){
       alert("Erro ao cadastrar!");
   }
+
+// Area do Modal de produtos
+
+
+ // Espera o modal ser aberto
+const modalProduto = document.getElementById('modalProduto');
+modalProduto.addEventListener('show.bs.modal', event => {
+  // Botão que acionou o modal
+  const button = event.relatedTarget;
+
+  // Pega os dados do botão
+  const nome = button.getAttribute('data-nome');
+  const preco = button.getAttribute('data-preco');
+  const desc = button.getAttribute('data-desc');
+
+  // Atualiza o conteúdo do modal
+  const modalTitle = modalProduto.querySelector('.modal-title');
+  const modalPreco = modalProduto.querySelector('#modalPreco');
+  const modalDesc = modalProduto.querySelector('#modalDesc');
+
+  modalTitle.textContent = nome;
+  modalPreco.textContent = preco;
+  modalDesc.textContent = desc;
+});

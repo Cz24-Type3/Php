@@ -75,7 +75,7 @@
                     <!--Dark Mode-->
                     <button id="darkmode" type="button" class="btn"  data-bs-toggle="button"> <img src="darkmode.png" style="width:80%;height:80%;"> </button>
                     <!--Login e cadastro-->
-                    <button id="login" type="button" class="btn"  data-bs-toggle="button"> <img src="icone.png" style="width:80%;height:80%;"> </button>
+                    <button id="usuario" type="button" class="btn"  data-bs-toggle="button"> <img src="icone.png" style="width:80%;height:80%;"> </button>
                 </div>
             </div>
         </nav>
@@ -85,8 +85,30 @@
 
 
                     <!--Conteúdo principal-->
-    <div class="conteudo-principal">
+    <div class="conteudo-principal p-4 text-light">
+        <h2 style="color: white;">🔍 Consultar Usuário</h2>
+        <form id="form-busca" action="buscar_usuario.php" method="get" style="color: white;">
+            <label for="busca">Nome ou Login:</label>
+            <input type="text" id="busca" name="busca" placeholder="Digite o nome ou login" required>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
 
+        <div id="resultado" style="margin-top: 20px; color: white;"></div>
+    </div>
+
+    <script>
+    // Buscar usuário via AJAX
+        const form = document.getElementById("form-busca");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const termo = document.getElementById("busca").value;
+  
+            const resposta = await fetch(`buscar_usuario.php?busca=${encodeURIComponent(termo)}`);
+            const html = await resposta.text();
+            document.getElementById("resultado").innerHTML = html;
+        });
+    </script>
+    
         
     
     
