@@ -70,7 +70,7 @@
                 <!--Botão do menu lateral (para o mobile)-->
                 <button class="btn btn-outline-light d-md-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-lateral-mobile"> ☰</button>
                 <!--Logo do site com o link para voltar para o início-->
-                <a class="navbar-brand" href="index.html"> <img src="Logo1.png" class="img-fluid" style="width: 40%; height: 40%;"></a>
+                <a class="navbar-brand" href="main-page.html"> <img src="Logo1.png" class="img-fluid" style="width: 40%; height: 40%;"></a>
                 <div class="row justify-content-end">
                     <!--Dark Mode-->
                     <button id="darkmode" type="button" class="btn"  data-bs-toggle="button"> <img src="darkmode.png" style="width:80%;height:80%;"> </button>
@@ -84,58 +84,148 @@
     
 
 
-                    <!--Conteúdo principal-->
-    <div class="conteudo-principal">
-        <h1>Periféricos</h1>
-        <!--row = Linhas de conteúdos-->
-        <div class="row">
+<!--Conteúdo principal-->
+<div class="conteudo-principal">
+    <h1>Periféricos</h1>
 
-            <!--card 1-->
-            <div class="card" id="card">
-                <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
-                    <p class="card-text">Produto</p>
-                        <!--Mais conteúdo-->
-                    <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
-                </div>
+    <!--row = Linhas de conteúdos-->
+    <div class="row">
+
+        <!-- Card 1 -->
+        <div class="card" id="card">
+            <div class="card-body">
+                <button type="button" 
+                        class="btn btnmodalproduto" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalProduto" 
+                        data-nome="Bomba de oleo ap" 
+                        data-preco="R$ 619,10" 
+                        data-desc="Bomba de óleo alta vazão WV ap, 1.6/1.8/2.0">
+                    <h5 id="titulo-produto" class="card-title">Bomba de óleo ap</h5>
+                    <img src="bomba de oleo alta vazao wv ap.webp" style="width:100%;height:50%;">
+                    <!--Mais conteúdo-->
+                    <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                    <p class="card-text" style="color:white;">Bomba de óleo</p>
+                    </button>
             </div>
+        </div>
+        
 
-            <!-- Card 2-->
-            <div class="card" id="card">
-                <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
-                    <p class="card-text">Produto</p>
-                        <!--Mais conteúdo-->
-                    <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
-                </div>
-            </div>
-
-            <!-- Card 3-->
-            <div class="card" id="card">
-                <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
-                    <p class="card-text">Produto</p>
-                        <!--Mais conteúdo-->
-                    <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
-                </div>
-            </div>
-
-            <!-- Card 4-->
-            <div class="card" id="card">
-                <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
-                    <p class="card-text">Produto</p>
-                        <!--Mais conteúdo-->
-                    <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
-                </div>
+        <!-- Card 2-->
+        <div class="card" id="card">
+            <div class="card-body">
+                <button type="button" 
+                        class="btn btnmodalproduto" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalProduto" 
+                        data-nome="conta giro" 
+                        data-preco="R$ 730,50" 
+                        data-desc="Conta giros universal, Carbon 127Mn com shift light">
+                    <h5 id="titulo-produto" class="card-title">Conta giros</h5>
+                    <img src="conta giro.webp" style="width:55%;height:50%;">
+                    <!--Mais conteúdo-->
+                    <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                    <p class="card-text" style="color:white;">Conta giros universal</p>
+                    </button>
             </div>
         </div>
 
+        <!-- Card 3-->
+        <div class="card" id="card">
+            <div class="card-body">
+                <button type="button" 
+                        class="btn btnmodalproduto" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalProduto" 
+                        data-nome="ft700" 
+                        data-preco="R$ 22.472,25" 
+                        data-desc="Injeção eletronica FuelTech ft 700">
+                    <h5 id="titulo-produto" class="card-title">HX 40</h5>
+                    <img src="ft700.webp" style="width:100%;height:50%;">
+                    <!--Mais conteúdo-->
+                    <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                    <p class="card-text" style="color:white;">FuelTech ft700</p>
+                    </button>
+            </div>
+        </div>
+
+        <!-- Card 4-->
+        <div class="card" id="card">
+            <div class="card-body">
+                <button type="button" 
+                        class="btn btnmodalproduto" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalProduto" 
+                        data-nome="sensor de pressao" 
+                        data-preco="R$ 699,00" 
+                        data-desc="Sensor de pressão PS1500PSI FuelTech">
+                    <h5 id="titulo-produto" class="card-title">HX 40</h5>
+                    <img src="sensor de pressao PS1500PSI FuelTech.webp" style="width:35%;height:40%;">
+                    <!--Mais conteúdo-->
+                    <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                    <p class="card-text" style="color:white;">Sensor de pressão FuelTech</p>
+                    </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal de Produto (Bootstrap) -->
+<div class="modal fade" id="modalProduto" tabindex="-1" aria-labelledby="modalLabelProduto" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h5 class="modal-title" id="modalLabelProduto"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+    </div>
+    
+    <div class="modal-body">
+      <p id="modalPreco"></p>
+      <p id="modalDesc"></p>
+    </div>
+    
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      <button type="button" class="btn btn-success">Adicionar ao Carrinho</button>
+      <button type="button" class="btn btn-primary">Finalizar Compra</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+            <!--Modal do login-->
+<dialog id="modal-usuario">
+    <div id="perfil">
+        <h2 style="color: #f74000;">Perfil de usuário</h2>
+        <button onclick="abrirPerfil()">Informações do usuário</button>
+        <div id="perfil-dados" style="color:whitesmoke"></div>
+        <script>
+            // Função para abrir o modal e carregar os dados do perfil
+            function abrirPerfil(){
+                const modal = document.getElementById("modal-usuario");
+    
+                fetch("perfil.php")
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("perfil-dados").innerHTML = data;
+                        modal.showModal();
+                    })
+                    .catch(error => {
+                        document.getElementById("perfil-dados").innerHTML = "Erro ao carregar perfil.";
+                        console.error(error);
+                        modal.showModal();
+                    });
+            }
+        </script>
         
-    
-    
+    </div>
+</dialog>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS.js"></script>   
 </body>
 
 <script src="JS.js"></script>
-
 </html>

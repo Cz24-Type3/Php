@@ -1,0 +1,21 @@
+CREATE DATABASE kali_racers;
+USE kali_racers;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    cpf CHAR(11) NOT NULL UNIQUE,
+    nascimento DATE NOT NULL,
+    sexo ENUM('masculino', 'feminino', 'outro') NOT NULL,
+    mae VARCHAR(150) NOT NULL,
+    telefone VARCHAR(15),
+    celular VARCHAR(15) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    ulogin VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,  -- vai armazenar o hash (password_hash gera até 255 caracteres)
+    pergunta ENUM('cachorro', 'cor', 'musica') NOT NULL,
+    resposta VARCHAR(255) NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+

@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $hash = password_hash($nova_senha, PASSWORD_DEFAULT);
         $sql = "UPDATE usuarios SET senha='$hash' WHERE id='$id'";
         if (mysqli_query($conexao, $sql)) {
-            echo "✅ Senha alterada com sucesso!<br>";
+            echo "Senha alterada com sucesso!<br>";
             echo "<a href='User_Consult.html'>Voltar</a>";
         } else {
             echo "Erro ao alterar senha: " . mysqli_error($conexao);

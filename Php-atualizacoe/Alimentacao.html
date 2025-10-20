@@ -84,58 +84,149 @@
     
 
 
-                    <!--Conteúdo principal-->
+<!--Conteúdo principal-->
+
     <div class="conteudo-principal">
         <h1>Alimentação</h1>
+
         <!--row = Linhas de conteúdos-->
         <div class="row">
 
-            <!--card 1-->
+            <!-- Card 1 -->
             <div class="card" id="card">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
-                    <p class="card-text">Produto</p>
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="HX 40" 
+                            data-preco="R$ 2.500,00" 
+                            data-desc="Turbina HX 40 Auto Avionics, alto desempenho.">
+                        <h5 id="titulo-produto" class="card-title">HX 40</h5>
+                        <img src="HX40.jpg" style="width:59%;height:50%;">
                         <!--Mais conteúdo-->
-                    <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">HX 40 Auto Avionics</p>
+                        </button>
                 </div>
             </div>
+            
 
             <!-- Card 2-->
             <div class="card" id="card">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
-                    <p class="card-text">Produto</p>
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="HX 40" 
+                            data-preco="R$ 2.500,00" 
+                            data-desc="Turbina HX 40 Auto Avionics, alto desempenho.">
+                        <h5 id="titulo-produto" class="card-title">HX 40</h5>
+                        <img src="HX40.jpg" style="width:59%;height:50%;">
                         <!--Mais conteúdo-->
-                    <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">HX 40 Auto Avionics</p>
+                        </button>
                 </div>
             </div>
 
             <!-- Card 3-->
             <div class="card" id="card">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
-                    <p class="card-text">Produto</p>
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="HX 40" 
+                            data-preco="R$ 2.500,00" 
+                            data-desc="Turbina HX 40 Auto Avionics, alto desempenho.">
+                        <h5 id="titulo-produto" class="card-title">HX 40</h5>
+                        <img src="HX40.jpg" style="width:59%;height:50%;">
                         <!--Mais conteúdo-->
-                    <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">HX 40 Auto Avionics</p>
+                        </button>
                 </div>
             </div>
 
             <!-- Card 4-->
             <div class="card" id="card">
                 <div class="card-body">
-                    <h5 class="card-title">Titulo do produto</h5>
-                    <p class="card-text">Produto</p>
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="HX 40" 
+                            data-preco="R$ 2.500,00" 
+                            data-desc="Turbina HX 40 Auto Avionics, alto desempenho.">
+                        <h5 id="titulo-produto" class="card-title">HX 40</h5>
+                        <img src="HX40.jpg" style="width:59%;height:50%;">
                         <!--Mais conteúdo-->
-                    <a href="#" class="btn btn-primary"> Botão do conteúdo</a>
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">HX 40 Auto Avionics</p>
+                        </button>
                 </div>
             </div>
         </div>
 
+    </div>
+
+    <!-- Modal de Produto (Bootstrap) -->
+<div class="modal fade" id="modalProduto" tabindex="-1" aria-labelledby="modalLabelProduto" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
         
-    
-    
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabelProduto"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        
+        <div class="modal-body">
+          <p id="modalPreco"></p>
+          <p id="modalDesc"></p>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-success">Adicionar ao Carrinho</button>
+          <button type="button" class="btn btn-primary">Finalizar Compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+                <!--Modal do login-->
+    <dialog id="modal-usuario">
+        <div id="perfil">
+            <h2 style="color: #f74000;">Perfil de usuário</h2>
+            <button onclick="abrirPerfil()">Informações do usuário</button>
+            <div id="perfil-dados" style="color:whitesmoke"></div>
+            <script>
+                // Função para abrir o modal e carregar os dados do perfil
+                function abrirPerfil(){
+                    const modal = document.getElementById("modal-usuario");
+        
+                    fetch("perfil.php")
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById("perfil-dados").innerHTML = data;
+                            modal.showModal();
+                        })
+                        .catch(error => {
+                            document.getElementById("perfil-dados").innerHTML = "Erro ao carregar perfil.";
+                            console.error(error);
+                            modal.showModal();
+                        });
+                }
+            </script>
+            
+        </div>
+    </dialog>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS.js"></script>   
 </body>
 
 <script src="JS.js"></script>
-
 </html>

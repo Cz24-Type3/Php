@@ -18,15 +18,39 @@ manômetro agua, manômetro combustível, manômentro Óleo, Shift light.
 
 
 
-RELAÇAO DOS ITENS
+CREATE DATABASE kali_racers;
+USE kali_racers;
 
-Tabela de tipos de produtos:
-id_tipo (Alimentação, Periféricos,  Power train, Turbinas e weber)
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    cpf CHAR(11) NOT NULL UNIQUE,
+    nascimento DATE NOT NULL,
+    sexo ENUM('masculino', 'feminino', 'outro') NOT NULL,
+    mae VARCHAR(150) NOT NULL,
+    telefone VARCHAR(15),
+    celular VARCHAR(15) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    ulogin VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,  -- vai armazenar o hash (password_hash gera até 255 caracteres)
+    pergunta ENUM('cachorro', 'cor', 'musica') NOT NULL,
+    resposta VARCHAR(255) NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-Tabela de produtos:
-id_produto (aquela parada de auto increment e primary key)
-nome (varchar(60) not null)
-id_tipo INT
-valor INT (varchar(20) NOT NULL)
-fabricante (varchar(30)
-modelo(varchar(20))
+CREATE TABLE tipo(
+    id_tipo INT PRIMARI KEY AUTO_INCREMENT,
+    tipo_prod ENUM(turbinas, perifericos, alimentacao, power train) VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE produtos(
+    id_prod INT PRIMARY KEY AUTO_INCREMENT,
+    nome_prod VARCHAR(255) NOT NULL,
+    id_tipo INT,
+        FOREIGN KEY id_tipo REFERENCES tipo (id_tipo),
+    marca_prod VARCHAR(255) NOT NULL,
+    preco CHAR(255) NOT NULL,
+    quant INT NOT NULL
+);
+

@@ -45,6 +45,9 @@
       border:2px solid;
     border-image:linear-gradient(to right, #f74000, transparent)1;
     background-color:black;}
+    .card-text{
+        color: white;
+    }
 
     .login-container{
     color: white;
