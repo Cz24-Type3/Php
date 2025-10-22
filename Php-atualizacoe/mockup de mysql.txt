@@ -40,17 +40,16 @@ CREATE TABLE usuarios (
 );
 
 CREATE TABLE tipo(
-    id_tipo INT PRIMARI KEY AUTO_INCREMENT,
-    tipo_prod ENUM(turbinas, perifericos, alimentacao, power train) VARCHAR(255) NOT NULL
+    id_tipo INT PRIMARY KEY AUTO_INCREMENT,
+    tipo_prod ENUM('turbinas', 'perifericos', 'alimentacao', 'power train') NOT NULL
 );
 
-CREATE TABLE produtos(
-    id_prod INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE produtos (
+    id_prod INT AUTO_INCREMENT PRIMARY KEY,
     nome_prod VARCHAR(255) NOT NULL,
     id_tipo INT,
-        FOREIGN KEY id_tipo REFERENCES tipo (id_tipo),
     marca_prod VARCHAR(255) NOT NULL,
-    preco CHAR(255) NOT NULL,
-    quant INT NOT NULL
+    preco DECIMAL(10,2) NOT NULL,
+    quant INT NOT NULL,
+    FOREIGN KEY (id_tipo) REFERENCES tipo(id_tipo)
 );
-
