@@ -18,6 +18,12 @@ if($result->num_rows > 0) {
 
     // Verifica a senha digitada com a hash do banco
     if(password_verify($senha, $usuario['senha'])) {
+
+        //Verifica se é master
+        if($login = 'master'){
+            header("Location: painelmaster.html");
+            exit;
+        };
         // Login correto → cria sessão
         session_start(); //A SESSÃO AGORA INICIA AQUI
         $_SESSION['temp_user_id'] = $usuario['id'];

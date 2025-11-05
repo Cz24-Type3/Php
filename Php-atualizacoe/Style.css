@@ -17,6 +17,10 @@
   .areal-principal-login{
       background-color:rgb(32,32,32);
   }
+  .menu-principal-master{
+    width: 100%;
+    background-color:rgb(32, 32, 32);
+}
   .conteudo-principal{
       /*deixando 15% do espaço livre*/
       margin-left: 15%;

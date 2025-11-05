@@ -14,7 +14,7 @@ $result = mysqli_query($conexao, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     echo "<table border='1' style='color:white; width:80%; text-align:left;'>";
-    echo "<tr><th>Nome</th><th>Login</th><th>Email</th><th>Celular</th><th>Ações</th></tr>";
+    echo "<tr><th>Nome</th><th>Login</th><th>Email</th><th>Celular</th>></tr>";
 
     while ($usuario = mysqli_fetch_assoc($result)) {
         echo "<tr>";
@@ -22,7 +22,6 @@ if (mysqli_num_rows($result) > 0) {
         echo "<td>" . htmlspecialchars($usuario['ulogin']) . "</td>";
         echo "<td>" . htmlspecialchars($usuario['email']) . "</td>";
         echo "<td>" . htmlspecialchars($usuario['celular']) . "</td>";
-        echo "<td><a href='alterar_senha.php?id=" . $usuario['id'] . "' class='btn btn-warning btn-sm'>Alterar senha</a></td>";
         echo "</tr>";
     }
     echo "</table>";
