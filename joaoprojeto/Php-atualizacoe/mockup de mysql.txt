@@ -53,3 +53,9 @@ CREATE TABLE produtos (
     quant INT NOT NULL,
     FOREIGN KEY (id_tipo) REFERENCES tipo(id_tipo)
 );
+
+INSERT INTO tipo (tipo_prod)
+VALUES ('power train'),
+('turbinas'),
+('periféricos'),
+('alimentacao');

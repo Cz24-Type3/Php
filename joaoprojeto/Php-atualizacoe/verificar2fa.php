@@ -21,11 +21,13 @@ $usuario = mysqli_fetch_assoc($result);
     
 </head>
 <body style="background-color: #202020; color: white;">
-    <h2>Verificação de segundo fator</h2>
-    <form action="autentica2fa.php" method="post">
-        <p><strong><?php echo $usuario['pergunta']; ?></strong></p>
-        <input type="text" name="resposta" placeholder="Digite sua resposta" required>
-        <button type="submit">Verificar</button>
-    </form>
+    <div style='justify-content:center;align-content:center;margin-top:18%;margin-left:40%;'>
+        <h2>Verificação de segundo fator</h2>
+        <form action="autentica2fa.php" method="post">
+            <p><strong><?php echo $usuario['pergunta']; ?></strong></p>
+            <input type="text" name="resposta" placeholder="Digite sua resposta" required>
+            <button type="submit">Verificar</button>
+        </form>
+    </div>
 </body>
 </html>

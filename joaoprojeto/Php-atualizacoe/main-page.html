@@ -45,19 +45,19 @@
         <h1>Kali racers</h1>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" href="Turbinas.html" style="color:white;">Turbinas</a>
+                <a class="nav-link" href="Turbinas.html">Turbinas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Perifericos.html" style="color:white;">Periféricos</a>
+                <a class="nav-link" href="Perifericos.html">Periféricos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Alimentacao.html" style="color:white;">Alimentação</a>
+                <a class="nav-link" href="Alimentacao.html">Alimentação</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="Powertrain.html" style="color:white;">Power train</a>
+                <a class="nav-link active" href="Powertrain.html">Power train</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="User_Consult.html" style="color:white;">Consultar usuário / alterar senha</a>
+                <a class="nav-link active" href="User_Consult.html">Consultar usuário</a>
             </li>
         </ul>
     </div>
@@ -72,8 +72,18 @@
                 <!--Logo do site com o link para voltar para o início-->
                 <a class="navbar-brand" href="main-page.html"> <img src="Logo1.png" class="img-fluid" style="width: 40%; height: 40%;"></a>
                 <div class="row justify-content-end">
+
+                    <!--Carrinho-->
+                    <!--   
+                    <button id="carrinho" type="button" class="btn" data-bs-toggle="button"> <img src="carrinho.png" style="width:10%;height:80%;margin-top:10;"> </button>  
+                    -->
+
                     <!--Dark Mode-->
+                    
+                    
                     <button id="darkmode" type="button" class="btn"  data-bs-toggle="button"> <img src="darkmode.png" style="width:80%;height:80%;"> </button>
+                    
+                    
                     <!--Login e cadastro-->
                     <button id="usuario" type="button" class="btn"  data-bs-toggle="button"> <img src="icone.png" style="width:80%;height:80%;"> </button>
                 </div>
@@ -202,7 +212,7 @@
                             data-preco="R$ 4.500,00" 
                             data-desc="Turbina .70 Auto Avionics, alto desempenho.">
                         <h5 id="titulo-produto" class="card-title">.70</h5>
-                        <img src=".70 auto avionics.webp" style="width:59%;height:50%;">
+                        <img src="70 auto avionics.webp" style="width:59%;height:50%;">
                         <!--Mais conteúdo-->
                         <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
                         <p class="card-text" style="color:white;">.70 Auto Avionics</p>
@@ -238,7 +248,7 @@
   </div>
   
 
-                <!--Modal do login-->
+                <!--Modal do perfil-->
     <dialog id="modal-usuario">
         <div id="perfil">
             <h2 style="color: #f74000;">Perfil de usuário</h2>
