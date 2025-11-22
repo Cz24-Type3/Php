@@ -8,6 +8,19 @@ button.onclick = function() {
     modal.showModal();
 };
 
+
+
+      //Modal do altsenha
+const altbutton = document.getElementById('altsenha');
+const altmodal = document.getElementById('modal-altsenha');
+
+altbutton.onclick = function(){
+  altmodal.showModal();
+};
+
+
+
+
 //Muda de Login para Cadastro
 function mostrarCadastro() {
   document.getElementById("login-form").classList.remove("active");
@@ -38,6 +51,9 @@ function validarSenha() {
       alert("Erro ao cadastrar!");
   }
 
+
+
+  
 // Area do Modal de produtos
 
 
