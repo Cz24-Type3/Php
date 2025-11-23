@@ -1,4 +1,7 @@
 <?php
+
+// O MASTER IRÁ ALTERAR INFORMAÇÕES DO USUÁRIO
+
 include("conexao.php");
 
 $id = $_GET['id'] ?? null;

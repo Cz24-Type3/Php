@@ -59,3 +59,14 @@ VALUES ('power train'),
 ('turbinas'),
 ('periféricos'),
 ('alimentacao');
+
+
+CREATE TABLE log_usuarios (
+    logid INT AUTO_INCREMENT PRIMARY KEY,
+    id INT NOT NULL,
+    action VARCHAR(50) NOT NULL,
+    details TEXT NULL,
+    ip_address VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
+);

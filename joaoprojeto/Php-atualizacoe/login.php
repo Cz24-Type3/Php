@@ -29,6 +29,11 @@ if ($result->num_rows > 0) {
             $_SESSION['nome'] = $usuario['nome'];
             $_SESSION['ulogin'] = $usuario['ulogin'];
 
+            //  Registra o log
+            $stmt_log = $conexao->prepare("INSERT INTO log_usuarios (id, action) VALUES (?, 'login')");
+            $stmt_log->bind_param("i", $usuario['id']);
+            $stmt_log->execute();
+
             // Redireciona para a área logada
             header("Location: verificar2fa.php");
             exit;

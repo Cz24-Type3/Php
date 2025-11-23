@@ -18,6 +18,16 @@ altbutton.onclick = function(){
   altmodal.showModal();
 };
 
+//logoff
+function sair(){
+  window.location.href ='index.html';
+};
+
+//button voltar (master)
+function voltarmaster(){
+  window.location.href='painelmaster.html';
+}
+
 
 
 

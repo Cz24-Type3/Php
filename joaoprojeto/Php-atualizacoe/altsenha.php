@@ -1,4 +1,8 @@
 <?php
+
+// O USUÁRIO IRÁ ALTERAR A SUA SENHA
+
+
 session_start();
 include("conexao.php");
 
